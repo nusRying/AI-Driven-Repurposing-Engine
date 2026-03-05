@@ -1,0 +1,24 @@
+# Environment Variables
+.env
+backend/.env
+frontend/.env
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS/IDEs
+.DS_Store
+.vscode/
+.idea/
+
+# Large files
+profile.html
+backend/upwork_profile.html

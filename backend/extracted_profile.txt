@@ -1,0 +1,211 @@
+--- PROFILE TITLE ---
+Umair E. - AI Engineer | GenAI, LLMs, Computer Vision & Automation - Upwork Freelancer from Daska Kalan, Pakistan
+
+--- ALL TEXT FROM MAIN CONTENT ---
+Close the tooltip   
+      This freelancer's identity has been verified through a government ID check and a visual verification.
+        Verified
+Close the tooltip   
+      This freelancer's identity has been verified through a government ID check and a visual verification.
+This freelancer's identity has been verified through a government ID check and a visual verification.
+Close the tooltip  
+        Know someone who could use great talent? Share talent profiles with just one click.
+Know someone who could use great talent? Share talent profiles with just one click.
+Upgrade to Freelancer Plus
+Improve your chances of getting hired with proposal insights, profile customizations, and more perks.
+Edit availability badge
+Edit boost your profile
+Connects:
+      
+        191
+More than 30 hrs/week
+Open to contract to hire
+0-4 hours
+          Shows a typical response time range based on past replies to client messages.
+Shows a typical response time range based on past replies to client messages.
+English: 
+    
+     Fluent
+Urdu: 
+    
+     Native or Bilingual
+Verified
+    Verified   Close the tooltip  
+      This freelancer's identity has been verified through a government ID check and a visual verification.
+Verified
+    Verified
+Close the tooltip  
+      This freelancer's identity has been verified through a government ID check and a visual verification.
+Close the tooltip  
+    New
+   
+      Add a license
+     
+      Add a license to your profile to verify your qualifications to work in your field.
+Add a license to your profile to verify your qualifications to work in your field.
+National University of Sciences and Technology (NUST)
+      2021-2025
+Aspire College Daska
+     Bachelor's degree 2019-2021
+AI Engineer | GenAI, LLMs, Computer Vision & Automation
+Copy link to clipboard
+LLMs | RAG | Multi-Agent AI | Computer Vision | Automation
+
+If you're looking for AI that works in production — not just impressive demos — you're in the right place.
+
+I have 4+ years of hands-on experience building scalable AI systems that automate workflows, improve decision-making, and integrate cleanly into real-world software.
+
+I don’t build experiments.
+I build systems that run reliably.
+
+💼 What I Can Help You With
+
+✔ Secure, hallucination-resistant RAG & GraphRAG systems
+✔ Multi-agent AI workflows that automate complex operations
+✔ Real-time computer vision pipelines
+✔ Explainable predictive models for high-stakes decisions
+✔ Clean AI integrations into existing software stacks
+✔ End-to-end workflow automation (Python & n8n)
+
+🧠 Core Expertise
+🔹 Generative AI & LLM Systems
+
+• OpenAI, Anthropic, Open-source LLMs
+• Advanced Prompt Engineering
+• LoRA / QLoRA Fine-Tuning
+• Enterprise RAG & GraphRAG
+• FAISS, Pinecone, Weaviate, Supabase
+• Hallucination mitigation & validation layers
+
+Reliable. Context-aware. Secure.
+
+🔹 Multi-Agent AI & Automation
+
+• LangChain, LangGraph, CrewAI
+• Autonomous reasoning pipelines
+• Intelligent document extraction
+• API-connected workflow automation
+• Production-ready AI agents
+
+Agents that reason, coordinate, and execute.
+
+🔹 Computer Vision Systems
+
+• OpenCV, PyTorch, TensorFlow
+• YOLOv8–v11
+• Real-time object detection & tracking
+• OCR & document parsing
+• Edge-ready deployment
+
+Built for production — not research demos.
+
+🔹 Machine Learning & Explainable AI
+
+• Scikit-Learn, Pandas, SciPy
+• CNNs, BiLSTMs, Keras
+• Predictive modeling & anomaly detection
+• Explainable AI (XAI)
+
+When decisions matter, interpretability matters.
+
+⚙️ How I Work
+
+• Architecture-first thinking
+• Scalability from day one
+• Security & reliability prioritized
+• Clean, maintainable code
+• ROI-focused execution
+
+Clear communication. Structured delivery. No unnecessary complexity.
+
+🤝 What You Can Expect
+
+• Strong ownership of your project
+• Clear milestones & technical planning
+• Transparent communication
+• Well-documented deliverables
+• Long-term maintainability
+
+If you're building something serious and need someone who understands both AI depth and production reality — let's connect.
+Current page 1 of 3
+             1
+go to page
+             2
+go to page
+             3
+Mar 3, 2026
+    
+       - 
+      
+        Mar 3, 2026
+Feb 22, 2026
+    
+       - 
+      
+        Feb 23, 2026
+-
+            
+              Upwork enterprise client
+Upwork enterprise client
+Jan 2, 2026
+    
+       - 
+       
+        Present
+Python  Close the tooltip   
+  Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability. Python claims to combine "remarkable power with very clear syntax", and its standard library is large and comprehensive.
+  
+    wikipedia.org
+Close the tooltip   
+  Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability. Python claims to combine "remarkable power with very clear syntax", and its standard library is large and comprehensive.
+  
+    wikipedia.org
+Retrieval Augmented Generation
+Computer Vision  Close the tooltip   
+  Computer vision is a field that includes methods for acquiring, processing, analysing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions.
+  
+    wikipedia.org
+Close the tooltip   
+  Computer vision is a field that includes methods for acquiring, processing, analysing, and understanding images and, in general, high-dimensional data from the real world in order to produce numerical or symbolic information, e.g., in the forms of decisions.
+  
+    wikipedia.org
+Deep Learning  Close the tooltip   
+  A deep neural network (DNN) is an artificial neural network (ANN) with multiple hidden layers of units between the input and output layers.
+  
+    wikipedia.org
+Close the tooltip   
+  A deep neural network (DNN) is an artificial neural network (ANN) with multiple hidden layers of units between the input and output layers.
+  
+    wikipedia.org
+AI-Enhanced Medical Imaging
+Natural Language Processing  Close the tooltip   
+  Natural language processing (NLP) is a field of computer science and linguistics concerned with the interactions between computers and human (natural) languages; it began as a branch of artificial intelligence.
+  
+    wikipedia.org
+Natural Language Processing
+Close the tooltip   
+  Natural language processing (NLP) is a field of computer science and linguistics concerned with the interactions between computers and human (natural) languages; it began as a branch of artificial intelligence.
+  
+    wikipedia.org
+Artificial Intelligence  Close the tooltip   
+  Artificial intelligence (AI) is the intelligence of machines and the branch of computer science that aims to create it.
+  
+    wikipedia.org
+Artificial Intelligence
+Close the tooltip   
+  Artificial intelligence (AI) is the intelligence of machines and the branch of computer science that aims to create it.
+  
+    wikipedia.org
+Projects are a new way to earn on Upwork that helps you do more of the work you love to do. Create project offerings that highlight your strengths and attract more clients.
+Projects are a new way to earn on Upwork that helps you do more of the work you love to do.
+Endorsements from past clients
+Issued:
+        June 2023
+I have studied modern machine learning concepts, including supervised learning (linear regression, logistic regression, neural networks, and decision trees), unsupervised learning (clustering and anomaly detection), recommender systems, and reinforcement learning. 
+          
+            Learn more
+I developed and honed my hands on skills in Data Science and Machine Learning. Learners started with an orientation of Data Science and its Methodology, and became familiar with and used a variety of data science tools, learned Python and SQL, performed Data Visualization and Analysis, and created Machine Learning models. In the process, I completed several labs and
+assignments on the cloud, including a Capstone Project at the end to apply and demonstrate their knowledge and skills.
+          
+            Learn more
+Worked as an Instructor at an AI Bootcamp, delivering hands-on training in Machine Learning, Deep Learning, and Data Science. Designed and taught practical sessions covering Python, data preprocessing, supervised/unsupervised learning, neural networks, and real-world project development. Mentored students through capstone projects, helped debug models, and guided them in deploying AI solutions. Focused on building strong fundamentals while ensuring industry-relevant skills.
