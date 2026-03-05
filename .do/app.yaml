@@ -4,55 +4,33 @@ services:
   - name: backend
     environment_slug: python
     github:
-      repo: ${GITHUB_REPO} # This will be filled automatically by DO
       branch: main
       deploy_on_push: true
+      repo: nusRying/AI-Driven-Repurposing-Engine
     source_dir: backend
     run_command: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8080
     http_port: 8080
     instance_count: 1
     instance_size_slug: basic-xxs
     envs:
-      - key: DATABASE_URL
-        scope: RUN_TIME
-        value: ${DATABASE_URL}
       - key: SUPABASE_URL
         scope: RUN_TIME
-        value: ${SUPABASE_URL}
       - key: SUPABASE_ANON_KEY
         scope: RUN_TIME
-        value: ${SUPABASE_ANON_KEY}
       - key: SUPABASE_SERVICE_ROLE_KEY
         scope: RUN_TIME
-        value: ${SUPABASE_SERVICE_ROLE_KEY}
       - key: REDIS_URL
         scope: RUN_TIME
         value: ${redis.REDIS_URL}
       - key: GOOGLE_API_KEY
         scope: RUN_TIME
-        value: ${GOOGLE_API_KEY}
-      - key: DEEPGRAM_API_KEY
-        scope: RUN_TIME
-        value: ${DEEPGRAM_API_KEY}
-      - key: ELEVENLABS_API_KEY
-        scope: RUN_TIME
-        value: ${ELEVENLABS_API_KEY}
-      - key: ELEVENLABS_VOICE_ID
-        scope: RUN_TIME
-        value: ${ELEVENLABS_VOICE_ID}
-      - key: HEYGEN_API_KEY
-        scope: RUN_TIME
-        value: ${HEYGEN_API_KEY}
-      - key: HEYGEN_AVATAR_ID
-        scope: RUN_TIME
-        value: ${HEYGEN_AVATAR_ID}
 
   - name: frontend
     environment_slug: nodejs
     github:
-      repo: ${GITHUB_REPO}
       branch: main
       deploy_on_push: true
+      repo: nusRying/AI-Driven-Repurposing-Engine
     source_dir: frontend
     build_command: npm run build
     run_command: npm start
@@ -62,10 +40,8 @@ services:
     envs:
       - key: NEXT_PUBLIC_SUPABASE_URL
         scope: RUN_AND_BUILD_TIME
-        value: ${SUPABASE_URL}
       - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
         scope: RUN_AND_BUILD_TIME
-        value: ${SUPABASE_ANON_KEY}
       - key: NEXT_PUBLIC_BACKEND_URL
         scope: RUN_AND_BUILD_TIME
         value: ${backend.PUBLIC_URL}
@@ -74,9 +50,9 @@ workers:
   - name: celery-worker
     environment_slug: python
     github:
-      repo: ${GITHUB_REPO}
       branch: main
       deploy_on_push: true
+      repo: nusRying/AI-Driven-Repurposing-Engine
     source_dir: backend
     run_command: celery -A app.workers.celery_app worker --loglevel=info
     instance_count: 1
@@ -87,13 +63,10 @@ workers:
         value: ${redis.REDIS_URL}
       - key: SUPABASE_URL
         scope: RUN_TIME
-        value: ${SUPABASE_URL}
       - key: SUPABASE_SERVICE_ROLE_KEY
         scope: RUN_TIME
-        value: ${SUPABASE_SERVICE_ROLE_KEY}
       - key: GOOGLE_API_KEY
         scope: RUN_TIME
-        value: ${GOOGLE_API_KEY}
 
 databases:
   - engine: REDIS
