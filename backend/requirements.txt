@@ -20,3 +20,6 @@ pytest-asyncio==0.23.5
 loguru==0.7.2
 google-generativeai==0.4.1
 gunicorn==21.2.0
+edge-tts==6.1.12
+gTTS==2.5.1
+mutagen==1.47.0

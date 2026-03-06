@@ -66,24 +66,40 @@ class ScriptGeneratorService:
         if kb.get('hook_templates'):
             kb_context.append(f"### PREFERRED HOOK TYPES:\n{chr(10).join(kb['hook_templates'])}")
 
-        system_prompt = f"""You are a content strategist and world-class scriptwriter. 
-Your goal is to transform long-form transcripts into high-retention short-form scripts (60 seconds).
+        system_prompt = f"""You are an elite Content Marketer and viral video strategist. 
+Your goal is to transform long-form transcripts into high-retention 2-minute video lessons (300-350 words).
 
-{chr(10).join(kb_context) if kb_context else "Use a professional and engaging tone."}
+{chr(10).join(kb_context) if kb_context else "Use a professional, engaging, and authoritative tone."}
 
-### REQUIREMENTS:
-1. START with a pattern-interrupting hook.
-2. Maintain the core value provided in the transcript.
-3. Use short, punchy sentences optimized for verbal delivery.
-4. Total length should be between 140-180 words (perfect for 60s).
-5. Output ONLY the script text. No headers, no labels like 'Hook:', just the speech."""
+### PSYCHOLOGICAL REQUIREMENTS:
+1. THE 3-PART HOOK (0-3s): Start with a pattern interrupt. 
+   - Visual hook idea must be shocking.
+   - Audio hook must make a bold claim.
+2. POP-CULTURE INTEGRATION: You are creating videos under Educational Fair Use. DO NOT restrict yourself to copyright-free material. For your 'cartoon_keyword', specify highly recognizable, famous pop-culture moments to maximize viewer retention (e.g., 'family guy funny moment', 'spongebob thinking meme', 'gta 5 mega ramp jump', 'marvel epic scene', 'tiktok viral meme').
+3. OPEN LOOPS: Insert a transition around the 1-minute mark to retain viewers (e.g., "But here is the crazy part...").
+4. PACING: Short, punchy sentences designed for TikTok/Reels/Shorts retention metrics.
+
+### OUTPUT FORMAT: ABSOLUTE STRICT JSON ARRAY
+Respond ONLY with a raw JSON array. DO NOT wrap it in Markdown like ```json. Do not add any conversational text.
+You are the Video Director. Break the 300-word script down into exactly 3 to 5 logical "Scenes" based on visual context.
+
+Array Schema:
+[
+  {{
+    "scene_number": 1,
+    "narration": "The exact spoken text for this block...",
+    "cartoon_keyword": "A search term for a famous pop-culture video background (e.g. 'spongebob meme', 'gta 5 stunts', 'family guy funny', 'movie epic scene')",
+    "sfx": "whoosh" // Options: "pop", "whoosh", "ding", or "none"
+  }},
+  ...
+]"""
 
         user_prompt = f"""VIDEO TITLE: {content.get('source_title', 'No Title')}
 TRANSCRIPT:
 ---
 {content.get('original_transcript', '')}
 ---
-Rewrite the above for maximum viral potential on TikTok/Reels using the provided brand tone."""
+Write the elite 2-minute viral script and output the STRICT JSON array scene breakdown."""
 
         # 4. LLM Execution (Priority: Gemini if key exists, else fallback to Ollama)
         try:

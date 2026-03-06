@@ -23,13 +23,22 @@ def generate_video(self, content_id: int):
         res = supabase.table("content_queue").select("audio_url").eq("id", content_id).single().execute()
         content = res.data
         
-        # 2. Submit to HeyGen (Async)
-        heygen_video_id = run_async(video_service.generate(content["audio_url"]))
+        # 2. Submit / Generate (Sync)
+        video_result = video_service.generate(content_id, content["audio_url"])
         
-        # 3. Update Database with the HeyGen Video ID
-        supabase.table("content_queue").update({"heygen_video_id": heygen_video_id}).eq("id", content_id).execute()
-        
-        return f"Successfully submitted video for {content_id} (HeyGen ID: {heygen_video_id})"
+        # 3. Handle Result
+        if video_result.startswith("local_free_"):
+            # Execute local FFmpeg finish (Sync)
+            final_url = video_service.complete_local_video(content_id, content["audio_url"])
+            supabase.table("content_queue").update({
+                "status": "Video_Completed",
+                "final_video_url": final_url
+            }).eq("id", content_id).execute()
+            return f"Successfully generated local free video for {content_id}"
+        else:
+            # HeyGen Case
+            supabase.table("content_queue").update({"heygen_video_id": video_result}).eq("id", content_id).execute()
+            return f"Successfully submitted video for {content_id} (HeyGen ID: {video_result})"
         
     except Exception as exc:
         supabase.table("content_queue").update({

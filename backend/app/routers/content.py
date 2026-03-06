@@ -7,9 +7,22 @@ from datetime import datetime
 
 router = APIRouter(prefix="/api/content", tags=["content"])
 
-# Placeholder for Auth Dependency (consistent with ingest)
-async def get_current_user_id():
-    return "00000000-0000-0000-0000-000000000000"
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+
+security = HTTPBearer()
+
+async def get_current_user_id(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    """
+    Verifies the Supabase JWT and returns the user ID.
+    """
+    token = credentials.credentials
+    try:
+        res = supabase.auth.get_user(token)
+        if not res.user:
+            raise HTTPException(status_code=401, detail="Invalid authentication credentials")
+        return res.user.id
+    except Exception as e:
+        raise HTTPException(status_code=401, detail=f"Auth error: {str(e)}")
 
 @router.get("/", response_model=List[ContentQueueResponse])
 async def list_content(user_id: str = Depends(get_current_user_id)):
@@ -23,8 +36,11 @@ async def get_content(content_id: int, user_id: str = Depends(get_current_user_i
         raise HTTPException(status_code=404, detail="Content not found")
     return res.data
 
+from loguru import logger
+
 @router.post("/{content_id}/approve", response_model=ContentQueueResponse)
 async def approve_script(content_id: int, user_id: str = Depends(get_current_user_id)):
+    logger.info(f"Approving script. content_id: {content_id}, user_id: {user_id}")
     # 1. Verify existence and status
     res = supabase.table("content_queue").select("*").eq("id", content_id).eq("user_id", user_id).single().execute()
     if not res.data:
@@ -43,7 +59,8 @@ async def approve_script(content_id: int, user_id: str = Depends(get_current_use
     return updated.data[0]
 
 @router.patch("/{content_id}", response_model=ContentQueueResponse)
-async def update_script(content_id: int, script: str, user_id: str = Depends(get_current_user_id)):
+async def update_script(content_id: int, request: dict, user_id: str = Depends(get_current_user_id)):
+    script = request.get("script", "")
     update_data = {
         "generated_script": script,
         "script_edited_by_user": True
